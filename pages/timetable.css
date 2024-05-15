@@ -1,0 +1,270 @@
+:root {
+  --color-white: #fff;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-dark-variant: #677483;
+  --color-background: rgb(240, 246, 249);
+  --card-border-radius: 2rem;
+  --card-padding: 1.8rem;
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-background);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  backdrop-filter: blur(20px);
+}
+
+nav a {
+  position: relative;
+  font-size: 1.1rem;
+  text-decoration: none;
+  margin-left: 40px;
+  color: black;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+
+nav a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+nav .logout-btn {
+  width: 130px;
+  height: 50px;
+  background-color: transparent;
+  border: 2px solid black;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: 0.5s;
+}
+
+nav .logout-btn:hover {
+  background-color: #222146;
+  color: white;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  margin: 100px 100px 0;
+}
+
+table {
+  width: 100%;
+  background-color: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+
+table:hover {
+  box-shadow: none;
+}
+
+main table tbody td {
+  height: 4.8rem;
+  border-bottom: 1px solid var(--color-light);
+  color: var(--color-dark-variant);
+}
+
+main table tbody tr:last-child td {
+  border: none;
+}
+
+dialog {
+  animation: fade-out 0.6s ease-out;
+  border-radius: 10px;
+  padding: 16px 24px;
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  width: 400px;
+  height: 480px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+dialog[open]::backdrop {
+  backdrop-filter: blur(1px);
+}
+
+dialog[open] {
+  animation: fade-in 0.6s ease-in;
+}
+
+.menu-btn {
+  display: none;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+    display: none;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    display: block;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    display: block;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .logout {
+    display: none;
+  }
+
+  .menu-btn {
+    display: inline;
+  }
+
+  .mobile-dialog {
+    position: absolute;
+    height: 100px;
+    width: 82%;
+    left: calc((100% - 82%) / 2);
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  main a {
+    color: black;
+    text-decoration: none;
+  }
+
+  main .logout-btn {
+    border: none;
+    color: red;
+    padding: 0;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  * {
+    font-size: 12px;
+  }
+
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  main {
+    width: 92%;
+  }
+
+  nav.logout {
+    display: none;
+    font-size: 18px;
+  }
+
+  nav.menu-btn {
+    display: inline-block;
+  }
+
+  main a {
+    color: black;
+    text-decoration: none;
+  }
+
+  main .logout-btn {
+    border: none;
+    color: red;
+    padding: 0;
+  }
+
+  .titles {
+    display: none;
+  }
+
+  .results > div {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+    grid-template-rows: repeat(3, 50px);
+    margin-top: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid lightgray;
+    align-items: center;
+  }
+
+  .mobile-dialog {
+    position: absolute;
+    height: 100px;
+    width: 82%;
+    left: calc((100% - 82%) / 2);
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+}

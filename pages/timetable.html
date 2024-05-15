@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./timetable.css" />
+    <title>Journal | Time Table</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="../img/Xanadu-Logo-1.png" alt="./school logo" height="50" />
+      </div>
+
+      <nav class="menu-btn">
+        <ion-icon name="menu"></ion-icon>
+      </nav>
+
+      <nav class="logout">
+        <a href="./journal.html">Journal</a>
+        <button
+          class="logout-btn"
+        >
+          Logout
+        </button>
+      </nav>
+    </header>
+
+    <main>
+
+      <dialog class="mobile-dialog" >
+        <div class="flex">
+          <a href="./journal.html">Journal</a>
+        <button
+          class="logout-btn"
+        >
+          Logout
+        </button>
+        <div class="mobile-close-btn">
+          <ion-icon name="close"></ion-icon>
+        </div>
+        </div>
+        
+      </dialog>
+
+
+      <table>
+        <thead>
+          <tr>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Register</td>
+            <td>Register</td>
+            <td>Register</td>
+            <td>Register</td>
+            <td>Register</td>
+          </tr>
+          <tr>
+            <td class="subject">Assembly</td>
+            <td class="subject">English HL <br />C Nolte</td>
+            <td class="subject">Afrikaans <br />J de Beer</td>
+            <td class="subject">Robotics <br />M Engelbrecht</td>
+            <td class="subject">English HL <br />C Nolte</td>
+          </tr>
+          <tr>
+            <td class="subject">Mathematics <br />M Botha</td>
+            <td class="subject">Technology <br />C Stapelberg</td>
+            <td class="subject">Praise & Worship</td>
+            <td class="subject">Afrikaans EAT <br />J de Beer</td>
+            <td class="subject">Mathematics <br />M Botha</td>
+          </tr>
+          <tr>
+            <td class="subject">Biblical Studies <br />T Mphaphuli</td>
+            <td class="subject">Afrikaans EAT <br />J de Beer</td>
+            <td class="subject">English HL <br />C Nolte</td>
+            <td class="subject">Life Orientation <br />M Nienaber</td>
+            <td class="subject">Sport</td>
+          </tr>
+          <tr>
+            <td class="subject">English HL <br />C Nolte</td>
+            <td class="subject">EMS <br />E Chinga</td>
+            <td class="subject">Social Sc <br />D de Beer</td>
+            <td class="subject">Mathematics <br />M Botha</td>
+            <td class="subject">Social Sc <br />D de Beer</td>
+          </tr>
+          <tr>
+            <td class="subject">EMS <br />E Chinga</td>
+            <td class="subject">Social Sc <br />D de Beer</td>
+            <td class="subject">Natural Sc <br />T Mphaphuli</td>
+            <td class="subject">Technology <br />C Stapelberg</td>
+            <td class="subject">Afrikaans EAT <br />J de Beer</td>
+          </tr>
+          <tr>
+            <td class="subject">Natural Sc <br />T Mphaphuli</td>
+            <td class="subject">Mathematics <br />M Botha</td>
+            <td class="subject">Mathematics <br />M Botha</td>
+            <td class="subject">Arts & Cult. <br />E Tolmay</td>
+            <td class="subject">Natural Sc <br />T Mphaphuli</td>
+          </tr>
+          <tr>
+            <td class="subject">Afrikaans EAT <br />J de Beer</td>
+            <td class="subject">Short period</td>
+            <td class="subject">Culture</td>
+            <td class="subject">English HL. <br />C Nolte</td>
+            <td class="subject">Break</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./timetable.js"></script>
+    <script src="../script.js"></script>
+  </body>
+</html>
